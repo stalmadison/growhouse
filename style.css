@@ -36,7 +36,22 @@ html {
     padding: 230px;
     position: relative;
     z-index: 2;
-    background-color: #808080; /* Medium dark grey */
+    background-color: #D3D3D3;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) { /* Adjust the max-width as needed for your design */
+    .top-container {
+        padding: 50px 20px; /* Reduced padding for smaller screens */
+    }
+
+    .top-container h1 {
+        font-size: 24px; /* Smaller font size for the header */
+    }
+
+    .top-container p {
+        font-size: 16px; /* Smaller font size for the sub-header */
+    }
 }
 
 /* Video Section Container */
@@ -64,27 +79,43 @@ html {
     height: auto;
 }
 
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .video-section {
+        flex-direction: column;
+    }
+
+    .video-section .video-wrap {
+        /* Make each video take the full width of the container */
+        flex-basis: 100%;
+        margin-bottom: 10px; /* Optional: adds space between stacked videos */
+    }
+}
 
 /* Bottom Container */
 .bottom-container {
-    position: fixed; /* Changed from absolute to fixed */
-    bottom: 0; /* Align it to the bottom */
-    width: 100%; /* Make it full width */
-    text-align: center;
-    padding: 130px;
-    z-index: 2;
-    background-color: #808780; /* Medium dark grey */
+    position: fixed; /* Fixed to the bottom of the viewport */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Stretch from the left edge */
+    right: 0; /* Stretch to the right edge */
+    height: 230px; /* Set a specific height for the container */
+    z-index: 2; /* Ensure it's above other content */
+    background-color: #D3D3D3; /* Background color */
+    display: flex; /* Use flexbox to align child elements */
+    align-items: end; /* Align children (the footer) to the end (bottom) */
+    justify-content: center; /* Center children horizontally */
 }
 
 /* Footer Styling */
 footer {
     background-color: black;
     color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    z-index: 2;
+    padding: 10px 0; /* Padding inside the footer */
+    width: 100%; /* Take full width of its parent */
+    text-align: center; /* Center the text */
 }
+
+
 
 /* Dark Mode Styles */
 .dark-mode {
