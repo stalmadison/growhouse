@@ -132,13 +132,51 @@ nav ul li a:hover {
     }
 }
 
+.instagram-page .video-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items from the start to accommodate video and text */
+    padding: 150px;
+}
+
+.instagram-page .video-wrap {
+    flex: 1 1 calc(33% - 20px); /* Adjust for three columns layout */
+    margin: 10px;
+    display: flex;
+    flex-direction: column; /* Stack video and text vertically */
+    align-items: center; /* Center align items */
+}
+
+.instagram-page .video-wrap video {
+    width: 100%; /* Video fills the wrapper */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.instagram-page .video-stats {
+    margin-top: 5px; /* Space between video and stats */
+    text-align: center; /* Center the stats text */
+    font-size: 0.9em; /* Adjust font size as needed */
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .instagram-page .video-wrap {
+        flex-basis: 100%; /* Full width for mobile devices */
+    }
+}
+
+
+
+
+
 /* Bottom Container */
 .bottom-container {
     position: fixed; /* Fixed to the bottom of the viewport */
     bottom: 0; /* Align to the bottom */
     left: 0; /* Stretch from the left edge */
     right: 0; /* Stretch to the right edge */
-    height: 230px; /* Set a specific height for the container */
+    height: 50px; /* Set a specific height for the container */
     z-index: 2; /* Ensure it's above other content */
     background-color: #D3D3D3; /* Background color */
     display: flex; /* Use flexbox to align child elements */
