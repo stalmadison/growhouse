@@ -8,6 +8,18 @@
 </head>
 <body>
 
+<div class="nav-wrapper">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+
 <button id="dark-mode-toggle">Dark Mode</button>
 
 <div class="top-container">
@@ -80,6 +92,7 @@
     </footer>
 </div>
 
+
 <script>
     // JavaScript for dark mode toggle
     const toggleButton = document.getElementById('dark-mode-toggle');
@@ -87,13 +100,13 @@
         document.body.classList.toggle('dark-mode');
         this.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
     });
-
     // Parallax effect script
     window.addEventListener('scroll', function() {
         var scrollPosition = window.pageYOffset;
         var videoContainer = document.querySelector('.video-section-container');
         videoContainer.style.transform = 'translateY(' + scrollPosition * 0.25 + 'px)';
     });
+
 </script>
 
 </body>
